@@ -1,0 +1,32 @@
+<template>
+    <div class="button" v-editable="blok">
+        <ButtonLink
+            v-if="is_link(blok.link)"
+            :link="blok.link"
+            :css-class="`ml-0 ${onPrimaryBackground ? 'over-primary' : 'default'}`"
+        ><slot v-if="blok.text">{{blok.text}}</slot>
+        </ButtonLink>
+    </div>
+</template>
+
+<script>
+  import ButtonLink from '@/components/util/ButtonLink';
+
+  export default {
+    name: 'BodyButton',
+    props: {
+      'blok': Object,
+      'onPrimaryBackground': {
+      	type: Boolean,
+        default: false
+      }
+    },
+    components: {ButtonLink}
+  }
+</script>
+
+<style scoped>
+  .button {
+    text-align: center;
+  }
+</style>

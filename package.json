@@ -1,0 +1,53 @@
+{
+  "name": "oshine-storyblok",
+  "version": "1.0.0",
+  "description": "Softmedia Storyblok Theme Template",
+  "author": "Softmedia Interactive <info@softmedia.nl>",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "precommit": "npm run lint",
+    "postinstall": "if [ $STACK ]; then yarn build; fi",
+    "deploy": "nuxt generate && netlify deploy -d dist --prod"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.6.0",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/markdownit": "^1.2.4",
+    "@nuxtjs/sitemap": "^1.3.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.16.4",
+    "get-youtube-id": "^1.0.1",
+    "lazysizes": "^5.1.1",
+    "lodash": "^4.17.15",
+    "markdown-it-link-attributes": "^2.1.0",
+    "node-sass": "^4.11.0",
+    "nuxt": "^2.7.1",
+    "photoswipe": "^4.1.3",
+    "recaptcha-v3": "^1.5.0",
+    "sass-loader": "^7.3.1",
+    "storyblok-nuxt": "1.0.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.2",
+    "vue-awesome-swiper": "^3.1.3",
+    "vue-masonry-css": "^1.0.3",
+    "vue-scrollto": "^2.15.0",
+    "vue-vimeo-player": "^0.0.10",
+    "vuetify": "^1.5.13",
+    "vuetify-loader": "^1.2.2",
+    "vuetify-scss": "^1.4.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/proxy": "^1.3.3",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.3.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^3.0.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "nodemon": "^1.19.2"
+  }
+}
