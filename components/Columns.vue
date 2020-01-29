@@ -1,23 +1,23 @@
 <template>
-    <section v-editable="blok" :class="{columns: true, 'colored-background': blok.coloredBackground}">
-        <v-container fluid py-0 px-0>
-            <v-layout row wrap>
-                <v-flex :class="columnClassLeft">
-                    <ColumnsItem :blok="blok" :side="'left'" :style="{minHeight: minHeightColumnLeft}"/>
-                </v-flex>
-                <v-flex :class="columnClassRight">
-                    <ColumnsItem :blok="blok" :side="'right'" :style="{minHeight: minHeightColumnRight}"/>
-                </v-flex>
-            </v-layout>
-        </v-container>
-    </section>
+  <section v-editable="blok" :class="{columns: true, 'colored-background': blok.coloredBackground}">
+    <v-container fluid py-0 px-0>
+      <v-layout row wrap>
+        <v-flex :class="columnClassLeft">
+          <ColumnsItem :blok="blok" :side="'left'" :style="{minHeight: minHeightColumnLeft}"/>
+        </v-flex>
+        <v-flex :class="columnClassRight">
+          <ColumnsItem :blok="blok" :side="'right'" :style="{minHeight: minHeightColumnRight}"/>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </section>
 </template>
 
 <script>
   import ColumnsItem from '~/components/ColumnsItem'
 
   export default {
-  	name: 'Columns',
+    name: 'Columns',
     props: [
       'blok'
     ],
@@ -79,8 +79,7 @@
       getImageRatio(src) {
         const values = !src ? [] : src.split('/');
 
-        if (values.length)
-        {
+        if (values.length) {
           const size = values[5].split('x');
           return size[1] / size[0];
         }
@@ -92,81 +91,67 @@
 </script>
 
 <style lang="scss">
-    @import '~assets/scss/variables';
+  @import '~assets/scss/variables';
 
-    .columns
-    {
-        height: 100%;
-        width: 100%;
+  .columns {
+    height: 100%;
+    width: 100%;
 
-        &.colored-background
-        {
-            > .container
-            {
-                background: get-color('grey', 'lighten-4');
-            }
-        }
-
-        .column
-        {
-            height: 100%;
-
-            position: relative;
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            .image
-            {
-                height: 100%;
-                position: relative;
-
-                > .inner
-                {
-                    > img
-                    {
-                        height: 100%;
-                        position: absolute;
-                        top: 0;
-                    }
-                }
-
-                &.inline
-                {
-                    height: auto;
-
-                    margin: 0;
-                    padding: 24px;
-
-                    > .inner
-                    {
-                        position: relative;
-                    }
-                }
-            }
-
-            .content
-            {
-                margin: 0;
-                padding: 24px;
-            }
-
-            &.column-left
-            {
-                .image > .inner > img
-                {
-                    right: 0;
-                }
-            }
-
-            &.column-right
-            {
-                .image> .inner > img
-                {
-                    left: 0;
-                }
-            }
-        }
+    &.colored-background {
+      > .container {
+        background: get-color('grey', 'lighten-4');
+      }
     }
+
+    .column {
+      height: 100%;
+
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      .image {
+        height: 100%;
+        position: relative;
+
+        > .inner {
+          > img {
+            height: 100%;
+            position: absolute;
+            top: 0;
+          }
+        }
+
+        &.inline {
+          height: auto;
+
+          margin: 0;
+          padding: 24px;
+
+          > .inner {
+            position: relative;
+          }
+        }
+      }
+
+      .content {
+        margin: 0;
+        padding: 24px;
+      }
+
+      &.column-left {
+        .image > .inner > img {
+          right: 0;
+        }
+      }
+
+      &.column-right {
+        .image > .inner > img {
+          left: 0;
+        }
+      }
+    }
+  }
 </style>

@@ -1,11 +1,15 @@
 <template>
 	<main>
+    <Header :absolute="useAbsoluteHeader"/>
 		<component v-if="story.content.component" :page_name="story.name" :full_slug="story.full_slug" :key="story.content._uid" :blok="story.content" :is="story.content.component | dashify"></component>
 	</main>
 </template>
 
 <script>
-	const loadData = ({api, cacheVersion, errorCallback, version, path}) => api.get(`cdn/stories/${path}`, {
+	import Header from '@/components/layout/Header';
+	import get from 'lodash/get';
+
+  const loadData = ({api, cacheVersion, errorCallback, version, path}) => api.get(`cdn/stories/${path}`, {
 		version: version,
 		cv: cacheVersion
 	}).then((res) => {
@@ -41,7 +45,8 @@
 	};
 
 	export default {
-		data() {
+    components: { Header },
+    data() {
 			return {story: {content: {}}}
 		},
 		mounted() {
@@ -107,6 +112,11 @@
 
 			return data;
 		},
+    computed: {
+      useAbsoluteHeader() {
+        return get(this, 'story.content.body[0].component') === 'carousel';
+      }
+    },
 		head() {
 			let story = this.story;
 			const data = {

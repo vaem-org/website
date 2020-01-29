@@ -1,6 +1,5 @@
 <template>
     <v-app>
-	    <Header/>
 	    <nuxt/>
 	    <Footer/>
 		<PhotoSwipeModal/>
@@ -8,7 +7,6 @@
 </template>
 
 <script>
-	import Header from '~/components/layout/Header'
 	import Footer from '~/components/layout/Footer'
 	import PhotoSwipeModal from '~/components/modals/Photoswipe';
 
@@ -17,6 +15,6 @@
 	}
 
 	export default {
-		components: { Header, Footer, PhotoSwipeModal }
+		components: { Footer, PhotoSwipeModal }
 	}
 </script>

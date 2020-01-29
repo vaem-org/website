@@ -1,5 +1,5 @@
 <template>
-    <BodyText :blok="blok" :colored="true"/>
+  <BodyText :blok="blok" :colored="true"/>
 </template>
 
 <script>
@@ -8,6 +8,6 @@
   export default {
     name: 'BodyPrimaryText',
     props: ['blok'],
-    components: {BodyText}
+    components: { BodyText }
   }
 </script>

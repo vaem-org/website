@@ -1,9 +1,9 @@
 export function getResolution(url) {
   return ((url || '')
-    .split('/')
-    .find(c => /^\d+x\d+$/.exec(c)) || '')
-    .split('x')
-    .map(value => parseInt(value));
+  .split('/')
+  .find(c => /^\d+x\d+$/.exec(c)) || '')
+  .split('x')
+  .map(value => parseInt(value));
 }
 
 export function getPaddingTop(url) {

@@ -5,6 +5,9 @@
     <div>
       <v-container grid-list-xl>
         <v-layout v-bind="binding">
+          <v-flex>
+            <v-logo :color-scheme="1"/>
+          </v-flex>
           <v-flex
             v-if="$store.state.settings.footerTitle || $store.state.settings.footerText"
           >
@@ -57,7 +60,6 @@
               dark
               small
               depressed
-              color="grey darken-3"
               target="_blank"
               itemprop="sameAs"
               v-if="$store.state.settings.facebook"
@@ -70,7 +72,6 @@
               dark
               small
               depressed
-              color="grey darken-3"
               target="_blank"
               itemprop="sameAs"
               v-if="$store.state.settings.linkedin"
@@ -83,7 +84,6 @@
               dark
               small
               depressed
-              color="grey darken-3"
               target="_blank"
               itemprop="sameAs"
               v-if="$store.state.settings.twitter"
@@ -96,7 +96,6 @@
               dark
               small
               depressed
-              color="grey darken-3"
               target="_blank"
               itemprop="sameAs"
               v-if="$store.state.settings.instagram"
@@ -109,7 +108,6 @@
               dark
               small
               depressed
-              color="grey darken-3"
               target="_blank"
               itemprop="sameAs"
               v-if="$store.state.settings.github"
@@ -125,8 +123,10 @@
 </template>
 
 <script>
+  import VLogo from '@/components/VLogo';
   export default {
     name: 'Footer',
+    components: { VLogo },
     methods: {
       formatPhoneNumber(number) {
         if (number.startsWith(0)) {
@@ -175,7 +175,8 @@
   @import "@/assets/scss/_variables.scss";
 
   footer {
-    background: get-color('grey', 'lighten-5');
+    background: #17112d;
+    color: white;
 
     > div:first-of-type {
       max-width: map-get($container-max-widths, 'lg');
@@ -191,7 +192,6 @@
   ul a,
   .contact a {
     text-decoration: none;
-    color: $text-color;
 
     &:hover,
     &:hover > i {
@@ -225,16 +225,13 @@
       margin-top: 1rem;
 
       > i {
-        color: darken($text-color, 2%);
         margin-right: 1rem;
+        color: inherit;
       }
     }
   }
 
   .copyright {
-    background: get-color('grey', 'lighten-2');
-    color: get-color('grey', 'darken-1');
-
     a {
       display: inline-block;
       height: 2rem;
@@ -246,5 +243,9 @@
         margin-left: .25rem;
       }
     }
+  }
+
+  h4 {
+    color: inherit;
   }
 </style>

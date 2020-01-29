@@ -87,7 +87,7 @@ module.exports = {
       config.plugins.push(new VuetifyLoaderPlugin());
 
       if (isClient) {
-        config.devtool = '#source-map';
+        config.devtool = 'source-map';
       }
 
       if (isDev && isClient) {
@@ -129,4 +129,3 @@ module.exports = {
     ]
   }
 };
-

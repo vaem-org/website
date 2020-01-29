@@ -1,6 +1,7 @@
 <template>
   <div :class="{'image': true, 'border': blok.border}" v-editable="blok">
-    <v-img :src="blok.image | resize('1280x0/filters:format(jpg)')" :aspect-ratio="aspectRatio" v-if="blok.image"/>
+    <v-img :src="blok.image | resize('1280x0/filters:format(jpg)')" :aspect-ratio="aspectRatio"
+           v-if="blok.image"/>
   </div>
 </template>
 
@@ -24,6 +25,7 @@
 
 <style scoped lang="scss">
   @import "~/assets/scss/_variables.scss";
+
   .image {
     padding-left: 10%;
     padding-right: 10%;
