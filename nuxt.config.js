@@ -18,7 +18,8 @@ module.exports = {
     '@nuxtjs/markdownit',
     '@nuxtjs/sitemap',
     '@nuxtjs/dotenv',
-    'vue-scrollto/nuxt'
+    'vue-scrollto/nuxt',
+    '@nuxtjs/google-analytics'
   ],
   plugins: [
     { src: '~/plugins/polyfills', ssr: false },
@@ -127,5 +128,13 @@ module.exports = {
             }
         }]
     ]
-  }
+  },
+
+  /*
+  ** Google Analytics configuration
+   */
+  googleAnalytics: {
+    id: 'UA-157258362-1',
+    dev: false
+  },
 };
