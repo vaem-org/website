@@ -1,0 +1,34 @@
+---
+title: Quickstart
+---
+
+::row-container
+# 15 seconds of VAEM
+Use the following guide to quickly set up an asset manager instance.
+
+## Quickstart
+Use Docker compose for starting up a local instance of the asset manager:
+
+```shell
+# copy the main repository
+git clone https://github.com/vaem-org/vaem.git
+
+cd vaem
+
+# copy the example dotenv file
+cp .env.example .env
+```
+
+For a productional environment you should modify the SIGNATURE_SECRET and JWT_SECRET with random data.
+For the BASE variable please use an actual ip address and not localhost or anything that resolves to localhost.
+You can change the password in the AUTH_URL variable after local://
+
+You can use Amazon S3 and Cloudfront for storage and CDN. For user authentication it is possible to use
+Google Sign-In these will be explained on their respective chapters.
+
+Once you have modified the .env file, you can start the application with:
+```shell
+docker-compose up -d
+```
+Navigate to http://localhost:8000/admin/ and login with the password admin (or the password you have used in the previous step).
+::

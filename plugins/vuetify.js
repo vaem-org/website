@@ -1,14 +1,13 @@
-import 'vuetify/src/stylus/app.styl';
+import '@mdi/font/css/materialdesignicons.css'
 
-import '@/assets/scss/vuetify-theme.scss';
+import '@/assets/styles/main.scss'
+import { createVuetify } from 'vuetify'
 
-import Vue from 'vue';
-import Vuetify from 'vuetify/lib';
-
-Vue.use(Vuetify, {
-	options: {
-		themeCache: {
-			get: () => ''
-		}
-	}
-});
+export default defineNuxtPlugin((app) => {
+  const vuetify = createVuetify({
+    theme: {
+      defaultTheme: 'light'
+    }
+  })
+  app.vueApp.use(vuetify)
+})
