@@ -8,6 +8,7 @@
       <div class="content">
         <content-renderer :value="doc" />
       </div>
+      <c-footer />
     </template>
     <template #not-found>
       <c-nav-bar />
@@ -15,7 +16,10 @@
         <h1>Page not found</h1>
         <p>
           Click
-          <nuxt-link href="/">
+          <nuxt-link
+            href="/"
+            class="link"
+          >
             here
           </nuxt-link>
           to return to the homepage
@@ -27,7 +31,7 @@
 
 <style scoped lang="scss">
 .content {
-  :deep(a) {
+  :deep(a.link) {
     display: inline-block;
   }
 

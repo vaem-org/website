@@ -8,12 +8,18 @@ const currentYear = new Date().getFullYear()
     itemtype="https://schema.org/Corporation"
   >
     <v-container>
-      <v-row>
+      <v-row align="center">
         <v-col>
-          <c-logo :color-scheme="1" />
+          <c-logo
+            :color-scheme="1"
+            width="15rem"
+          />
         </v-col>
         <v-col>
-          <content-doc path="_footer" />
+          <content-doc
+            path="_footer"
+            :head="false"
+          />
         </v-col>
         <v-col
           class="contact"
@@ -59,3 +65,15 @@ const currentYear = new Date().getFullYear()
     </v-container>
   </footer>
 </template>
+
+<style scoped lang="scss">
+footer {
+  background: #17112d;
+  color: white;
+  padding: 2em 0;
+
+  a {
+    color: inherit;
+  }
+}
+</style>

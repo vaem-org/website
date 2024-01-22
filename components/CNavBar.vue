@@ -2,7 +2,7 @@
 defineProps({
   dark: Boolean,
   hero: {
-    type: String,
+    type: Object,
     default: null
   }
 })
@@ -27,6 +27,7 @@ defineProps({
           <nuxt-link to="/">
             <c-logo
               :text-color="dark ? 'white' : 'black'"
+              width="20rem"
             />
           </nuxt-link>
           <ul class="justify-end">
@@ -67,10 +68,6 @@ defineProps({
   &.dark {
     color: white;
   }
-}
-
-.c-logo {
-  width: 20em;
 }
 
 .position-absolute {

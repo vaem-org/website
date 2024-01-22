@@ -10,7 +10,12 @@ export default defineNuxtConfig({
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
         // @ts-expect-error
-        config.plugins.push(vuetify({ autoImport: true }))
+        config.plugins.push(vuetify({
+          autoImport: true,
+          styles: {
+            configFile: 'assets/styles/settings.scss'
+          }
+        }))
       })
     },
     '@nuxtjs/eslint-module',
@@ -27,7 +32,10 @@ export default defineNuxtConfig({
   },
   content: {
     highlight: {
-      theme: 'github-dark'
+      theme: 'github-light'
+    },
+    markdown: {
+      anchorLinks: false
     }
   },
   googleFonts: {

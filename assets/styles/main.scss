@@ -1,3 +1,2 @@
-@use "vuetify" with (
-  $body-font-family: Montserrat
-);
+@use "./settings";
+@use "vuetify";

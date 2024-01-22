@@ -7,6 +7,10 @@ defineProps({
   colorScheme: {
     type: Number,
     default: 0
+  },
+  width: {
+    type: [String, Number],
+    default: undefined
   }
 })
 
@@ -17,7 +21,10 @@ const gradients = [
 </script>
 
 <template>
-  <div class="c-logo">
+  <div
+    class="c-logo"
+    :style="{ width }"
+  >
     <div class="responsive">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 395.196 135.945">
         <defs>
