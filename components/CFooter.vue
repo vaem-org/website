@@ -9,19 +9,21 @@ const currentYear = new Date().getFullYear()
   >
     <v-container>
       <v-row align="center">
-        <v-col>
+        <v-col cols="12" sm="4">
           <c-logo
             :color-scheme="1"
             width="15rem"
           />
         </v-col>
-        <v-col>
+        <v-col cols="12" sm="4">
           <content-doc
             path="_footer"
             :head="false"
           />
         </v-col>
         <v-col
+          cols="12"
+          sm="4"
           class="contact"
         >
           <h4>Contact</h4>
@@ -71,6 +73,7 @@ footer {
   background: #17112d;
   color: white;
   padding: 2em 0;
+  margin-top: 3em;
 
   a {
     color: inherit;

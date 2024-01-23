@@ -1,6 +1,6 @@
 ---
 title: 'VAEM'
-hero: { src: 'header-3', text: 'The opensource video streaming platform.' }
+hero: { src: 'header-3.jpg', text: 'The opensource video streaming platform.' }
 navigation: false
 ---
 

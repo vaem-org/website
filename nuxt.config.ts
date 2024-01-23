@@ -20,7 +20,8 @@ export default defineNuxtConfig({
     },
     '@nuxtjs/eslint-module',
     '@nuxt/content',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxt/image'
   ],
 
   vite: {

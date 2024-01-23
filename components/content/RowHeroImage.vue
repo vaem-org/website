@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import header3 from '~/assets/images/header-3.jpg'
-
 const { src } = defineProps({
   src: {
     type: String,
@@ -12,23 +10,46 @@ const { src } = defineProps({
   }
 })
 
-const resolved = ({
-  'header-3': header3
-})[src]
+const img = useImage()
+const height = 600
+
+const resized = computed(() => {
+  return img(src, {
+    width: 1920,
+    height,
+    format: 'webp',
+    fit: 'cover'
+  })
+})
+
+const srcset = computed(() => {
+  return img.getSizes(src, {
+    sizes: 'xs:100vw sm:100vw',
+    modifiers: {
+      width: 1920,
+      height,
+      format: 'webp',
+      fit: 'cover'
+    }
+  })
+})
+
 </script>
 
 <template>
   <v-img
-    :src="resolved"
+    :src="resized"
+    :srcset="srcset.srcset"
+    :sizes="srcset.sizes"
     alt="Hero image"
-    :aspect-ratio="1800/800"
+    :aspect-ratio="1920/height"
     transition="none"
   >
     <slot />
     <div class="d-flex fill-height">
       <div
         v-if="text"
-        class="text"
+        class="text d-none d-sm-block"
       >
         {{ text }}
       </div>
@@ -38,7 +59,7 @@ const resolved = ({
 
 <style scoped>
 .text {
-  font-size: 3vw;
+  font-size: 2.5vw;
   white-space: pre-line;
   font-weight: bold;
   color: white;

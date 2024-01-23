@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <v-col>
+  <v-col cols="12" lg="4">
     <div class="d-flex align-start">
       <div class="icon">
         <v-icon size="2em">

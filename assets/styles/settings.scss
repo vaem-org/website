@@ -1,5 +1,9 @@
-@use 'vuetify/settings' with (
+@forward 'vuetify/settings' with (
   $body-font-family: Montserrat,
   $button-elevation: ('default': 0, 'hover': 2, 'active': 4),
-  $color-pack: false
+  $color-pack: false,
+  $container-max-widths: (
+    'xl': 1920px * 0.8,
+    'xxl': 2560px * 0.8
+  )
 );

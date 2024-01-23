@@ -27,10 +27,9 @@ defineProps({
           <nuxt-link to="/">
             <c-logo
               :text-color="dark ? 'white' : 'black'"
-              width="20rem"
             />
           </nuxt-link>
-          <ul class="justify-end">
+          <ul class="justify-end my-3 mt-sm-0">
             <li
               v-for="link of navigation"
               :key="link._path"
@@ -47,8 +46,9 @@ defineProps({
 </template>
 
 <style scoped lang="scss">
+@use 'assets/styles/settings';
+
 .nav-bar {
-  display: flex;
   margin-top: 2em;
 
   ul {
@@ -74,5 +74,19 @@ defineProps({
   top: 0;
   left: 0;
   right: 0;
+}
+
+.c-logo {
+  width: 6rem;
+}
+
+@media #{map-get(settings.$display-breakpoints, 'sm-and-up')} {
+  .nav-bar {
+    display: flex;
+  }
+
+  .c-logo {
+    width: 20rem;
+  }
 }
 </style>
