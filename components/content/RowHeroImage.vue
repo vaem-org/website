@@ -34,21 +34,26 @@ const srcset = computed(() => {
   })
 })
 
+const style = computed(() => ({
+  paddingBottom: `${height / 1920 * 100}%`
+}))
 </script>
 
 <template>
-  <v-img
-    :src="resized"
-    :srcset="srcset.srcset"
-    :sizes="srcset.sizes"
-    alt="Hero image"
-    :aspect-ratio="1920/height"
-    transition="none"
+  <div
+    class="responsive"
+    :style="style"
   >
-    <slot />
+    <img
+      :src="resized"
+      :srcset="srcset.srcset"
+      :sizes="srcset.sizes"
+      alt="Hero image"
+      transition="none"
+    >
     <div
       v-if="text"
-      class="d-flex fill-height"
+      class="d-flex fill-height content"
     >
       <h1
         class="text d-none d-sm-block"
@@ -56,10 +61,22 @@ const srcset = computed(() => {
         {{ text }}
       </h1>
     </div>
-  </v-img>
+  </div>
 </template>
 
 <style scoped>
+.responsive {
+  position: relative;
+}
+
+img, .content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
 .text {
   font-size: 2.5vw;
   white-space: pre-line;
