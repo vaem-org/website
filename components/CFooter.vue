@@ -26,7 +26,7 @@ const currentYear = new Date().getFullYear()
           sm="4"
           class="contact"
         >
-          <h4>Contact</h4>
+          <h2>Contact</h2>
           <a
             href="mailto:info@vaem.org"
           >

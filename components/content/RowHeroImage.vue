@@ -46,13 +46,15 @@ const srcset = computed(() => {
     transition="none"
   >
     <slot />
-    <div class="d-flex fill-height">
-      <div
-        v-if="text"
+    <div
+      v-if="text"
+      class="d-flex fill-height"
+    >
+      <h1
         class="text d-none d-sm-block"
       >
         {{ text }}
-      </div>
+      </h1>
     </div>
   </v-img>
 </template>

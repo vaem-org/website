@@ -1,5 +1,6 @@
 ---
 title: 'VAEM'
+description: 'VAEM, the open source video streaming platform.'
 hero: { src: 'header-3.jpg', text: 'The opensource video streaming platform.' }
 navigation: false
 ---

@@ -29,7 +29,7 @@ async function submit () {
       {
         method: 'POST',
         body: new URLSearchParams({
-          ...this.values,
+          ...values.value,
           'form-name': 'contact'
         })
       }
@@ -59,6 +59,7 @@ async function submit () {
           label="Name"
           class="mb-3"
           autofocus
+          name="name"
         />
 
         <v-text-field
@@ -69,6 +70,7 @@ async function submit () {
           required
           append-inner-icon="mdi-at"
           class="mb-3"
+          name="email"
         />
 
         <v-textarea
@@ -78,6 +80,7 @@ async function submit () {
           :rules="remarkRules"
           required
           class="mb-3"
+          name="remark"
         />
 
         <v-btn

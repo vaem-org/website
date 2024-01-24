@@ -24,7 +24,7 @@ defineProps({
           class="nav-bar align-center"
           :class="{ dark }"
         >
-          <nuxt-link to="/">
+          <nuxt-link to="/" aria-label="Home">
             <c-logo
               :text-color="dark ? 'white' : 'black'"
             />

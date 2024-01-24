@@ -2,6 +2,13 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      }
+    }
+  },
   devtools: { enabled: true },
   build: {
     transpile: ['vuetify']
@@ -21,7 +28,8 @@ export default defineNuxtConfig({
     '@nuxtjs/eslint-module',
     '@nuxt/content',
     '@nuxtjs/google-fonts',
-    '@nuxt/image'
+    '@nuxt/image',
+    'nuxt-gtag'
   ],
 
   vite: {
