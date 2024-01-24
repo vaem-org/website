@@ -12,17 +12,17 @@ Want to stream your videos without any restrictions? Use VAEM to encode your vid
 ::
 
 ::row-columns
-  ::column-icon{icon="mdi-hot-tub"}
+  ::column-icon{icon="$mdiHotTub"}
 ## Easy to set-up
 Get an instance up and running in 15 seconds using Docker.
   ::
-  ::column-icon{icon="mdi-lightning-bolt-circle"}
+  ::column-icon{icon="$mdiLightningBoltCircle"}
 ## CDN & Cloud
 
 Easily integrate Amazon S3, Amazon Cloudfront or BunnyCDN to make your videos accessible worldwide too unlimited
 concurrent users.
   ::
-  ::column-icon{icon="mdi-cellphone"}
+  ::column-icon{icon="$mdiCellphone"}
 ## Play anywhere
 
 Playback works on most browsers and devices.

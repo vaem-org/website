@@ -5,7 +5,7 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
-  '@mdi/font':
+  '@mdi/js':
     specifier: ^7.4.47
     version: 7.4.47
   '@nuxt/content':
@@ -977,8 +977,8 @@ packages:
       - supports-color
     dev: true
 
-  /@mdi/font@7.4.47:
-    resolution: {integrity: sha512-43MtGpd585SNzHZPcYowu/84Vz2a2g31TvPMTm9uTiCSWzaheQySUcSyUH/46fPnuPQWof2yd0pGBtzee/IQWw==}
+  /@mdi/js@7.4.47:
+    resolution: {integrity: sha512-KPnNOtm5i2pMabqZxpUz7iQf+mfrYZyKCZ8QNz85czgEt7cuHcGorWfdzUMWYA0SD+a6Hn4FmJ+YhzzzjkTZrQ==}
     dev: true
 
   /@netlify/functions@2.4.1:

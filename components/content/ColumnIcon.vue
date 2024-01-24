@@ -11,9 +11,10 @@ defineProps({
   <v-col cols="12" lg="4">
     <div class="d-flex align-start">
       <div class="icon">
-        <v-icon size="2em">
-          {{ icon }}
-        </v-icon>
+        <v-icon
+          size="1.5em"
+          :icon="icon"
+        />
       </div>
       <div class="text">
         <slot />
@@ -28,6 +29,6 @@ defineProps({
   background: rgb(var(--v-theme-primary));
   color: #fff;
   margin-right: 2rem;
-  padding: 0.25rem;
+  padding: 1rem;
 }
 </style>

@@ -32,9 +32,8 @@ const currentYear = new Date().getFullYear()
           >
             <v-icon
               class="mr-2"
-            >
-              mdi-email
-            </v-icon>
+              icon="$mdiEmail"
+            />
             <span itemprop="email">info@vaem.org</span>
           </a>
         </v-col>
