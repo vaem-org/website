@@ -2,12 +2,12 @@
 const { src } = defineProps({
   src: {
     type: String,
-    default: ''
+    default: '',
   },
   text: {
     type: String,
-    default: ''
-  }
+    default: '',
+  },
 })
 
 const img = useImage()
@@ -18,7 +18,7 @@ const resized = computed(() => {
     width: 1920,
     height,
     format: 'webp',
-    fit: 'cover'
+    fit: 'cover',
   })
 })
 
@@ -29,13 +29,13 @@ const srcset = computed(() => {
       width: 1920,
       height,
       format: 'webp',
-      fit: 'cover'
-    }
+      fit: 'cover',
+    },
   })
 })
 
 const style = computed(() => ({
-  paddingBottom: `${height / 1920 * 100}%`
+  paddingBottom: `${height / 1920 * 100}%`,
 }))
 </script>
 

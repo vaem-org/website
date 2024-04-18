@@ -5,7 +5,7 @@ import {
   mdiHotTub,
   mdiLightningBoltCircle,
   mdiCellphone,
-  mdiEmail
+  mdiEmail,
 } from '@mdi/js'
 
 export default defineNuxtPlugin((app) => {
@@ -17,22 +17,22 @@ export default defineNuxtPlugin((app) => {
         mdiHotTub,
         mdiLightningBoltCircle,
         mdiCellphone,
-        mdiEmail
+        mdiEmail,
       },
       sets: {
-        mdi
-      }
+        mdi,
+      },
     },
     theme: {
       defaultTheme: 'light',
       themes: {
         light: {
           colors: {
-            primary: '#25a9ce'
-          }
-        }
-      }
-    }
+            primary: '#25a9ce',
+          },
+        },
+      },
+    },
   })
   app.vueApp.use(vuetify)
 })

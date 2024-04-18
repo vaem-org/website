@@ -5,51 +5,55 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: 'en'
-      }
-    }
+        lang: 'en',
+      },
+    },
   },
   devtools: { enabled: true },
   build: {
-    transpile: ['vuetify']
+    transpile: ['vuetify'],
   },
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
-        // @ts-expect-error
-        config.plugins.push(vuetify({
+        config.plugins?.push?.(vuetify({
           autoImport: true,
           styles: {
-            configFile: 'assets/styles/settings.scss'
-          }
+            configFile: 'assets/styles/settings.scss',
+          },
         }))
       })
     },
-    '@nuxtjs/eslint-module',
+    '@nuxt/eslint',
     '@nuxt/content',
     '@nuxtjs/google-fonts',
     '@nuxt/image',
-    'nuxt-gtag'
+    'nuxt-gtag',
   ],
 
   vite: {
     vue: {
       template: {
-        transformAssetUrls
-      }
-    }
+        transformAssetUrls,
+      },
+    },
   },
   content: {
     highlight: {
-      theme: 'github-light'
+      theme: 'github-light',
     },
     markdown: {
-      anchorLinks: false
-    }
+      anchorLinks: false,
+    },
   },
   googleFonts: {
     families: {
-      Montserrat: true
-    }
-  }
+      Montserrat: true,
+    },
+  },
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
 })

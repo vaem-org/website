@@ -3,8 +3,8 @@ defineProps({
   dark: Boolean,
   hero: {
     type: Object,
-    default: null
-  }
+    default: null,
+  },
 })
 </script>
 
@@ -24,7 +24,10 @@ defineProps({
           class="nav-bar align-center"
           :class="{ dark }"
         >
-          <nuxt-link to="/" aria-label="Home">
+          <nuxt-link
+            to="/"
+            aria-label="Home"
+          >
             <c-logo
               :text-color="dark ? 'white' : 'black'"
             />

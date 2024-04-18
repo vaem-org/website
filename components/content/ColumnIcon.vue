@@ -2,13 +2,16 @@
 defineProps({
   icon: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 })
 </script>
 
 <template>
-  <v-col cols="12" lg="4">
+  <v-col
+    cols="12"
+    lg="4"
+  >
     <div class="d-flex align-start">
       <div class="icon">
         <v-icon

@@ -1,23 +1,23 @@
 <script setup>
 const emailRules = [
   v => !!v || 'Please enter your email address',
-  v => /@/.test(v) || 'Please enter a valid email address'
+  v => /@/.test(v) || 'Please enter a valid email address',
 ]
 
 const remarkRules = [
-  v => !!v || 'Please enter your question'
+  v => !!v || 'Please enter your question',
 ]
 const values = ref({
   name: '',
   email: '',
-  remark: ''
+  remark: '',
 })
 
 const valid = ref(false)
 const loading = ref(false)
 const submitted = ref(false)
 
-async function submit () {
+async function submit() {
   if (!valid.value) {
     return
   }
@@ -30,14 +30,16 @@ async function submit () {
         method: 'POST',
         body: new URLSearchParams({
           ...values.value,
-          'form-name': 'contact'
-        })
-      }
+          'form-name': 'contact',
+        }),
+      },
     )
     submitted.value = true
-  } catch (e) {
+  }
+  catch (e) {
     console.error(e.response.data)
-  } finally {
+  }
+  finally {
     loading.value = false
   }
 }
@@ -45,7 +47,10 @@ async function submit () {
 
 <template>
   <v-row>
-    <v-col cols="12" sm="6">
+    <v-col
+      cols="12"
+      sm="6"
+    >
       <v-form
         v-if="!submitted"
         v-model="valid"
