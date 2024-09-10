@@ -9,10 +9,13 @@ export default defineNuxtConfig({
       },
     },
   },
+
   devtools: { enabled: true },
+
   build: {
     transpile: ['vuetify'],
   },
+
   modules: [
     (_options, nuxt) => {
       nuxt.hooks.hook('vite:extendConfig', (config) => {
@@ -38,6 +41,7 @@ export default defineNuxtConfig({
       },
     },
   },
+
   content: {
     highlight: {
       theme: 'github-light',
@@ -46,14 +50,18 @@ export default defineNuxtConfig({
       anchorLinks: false,
     },
   },
+
   googleFonts: {
     families: {
       Montserrat: true,
     },
   },
+
   eslint: {
     config: {
       stylistic: true,
     },
   },
+
+  compatibilityDate: '2024-08-29',
 })
