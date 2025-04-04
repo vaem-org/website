@@ -1,0 +1,1 @@
+import{m as s,g as r,l as n,G as o}from"./Cklwf_cd.js";const t={};function l(e,a){return n(),r("ul",null,[o(e.$slots,"default")])}const _=Object.assign(s(t,[["render",l]]),{__name:"ProseUl"});export{_ as default};
