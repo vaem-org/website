@@ -1,5 +1,10 @@
 <script setup lang="ts">
 const currentYear = new Date().getFullYear()
+
+const { data: footer } = await useAsyncData('footer', async () => {
+  return queryCollection('docs').path('/.footer')
+    .first()
+})
 </script>
 
 <template>
@@ -22,9 +27,9 @@ const currentYear = new Date().getFullYear()
           cols="12"
           sm="4"
         >
-          <content-doc
-            path="_footer"
-            :head="false"
+          <content-renderer
+            v-if="footer"
+            :value="footer"
           />
         </v-col>
         <v-col

@@ -17,6 +17,10 @@ const valid = ref(false)
 const loading = ref(false)
 const submitted = ref(false)
 
+const { data: formSubmitted } = await useAsyncData('form-submitted', async () => {
+  return queryCollection('docs').path('/.form-submitted').first()
+})
+
 async function submit() {
   if (!valid.value) {
     return
@@ -101,9 +105,9 @@ async function submit() {
         </v-btn>
       </v-form>
       <div v-else>
-        <content-doc
-          path="_form-submitted"
-          :head="false"
+        <content-renderer
+          v-if="formSubmitted"
+          :value="formSubmitted"
         />
       </div>
     </v-col>

@@ -82,11 +82,12 @@ img, .content {
   white-space: pre-line;
   font-weight: bold;
   color: white;
-  align-self: center;
+  align-self: end;
   justify-self: center;
   text-align: left;
   margin-left: 20%;
   width: 40%;
   line-height: 125%;
+  padding-bottom: 1em;
 }
 </style>

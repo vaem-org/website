@@ -6,6 +6,12 @@ defineProps({
     default: null,
   },
 })
+
+const { data: navigation } = await useAsyncData('main-nav', () => {
+  return queryCollectionNavigation('docs')
+    .where('stem', 'NOT LIKE', '.%')
+    .order('stem', 'ASC')
+})
 </script>
 
 <template>
@@ -17,38 +23,35 @@ defineProps({
     <v-container
       :class="{ 'position-absolute': hero }"
     >
-      <content-navigation
-        v-slot="{ navigation }"
+      <div
+        class="nav-bar align-center"
+        :class="{ dark }"
       >
-        <div
-          class="nav-bar align-center"
-          :class="{ dark }"
+        <nuxt-link
+          to="/"
+          aria-label="Home"
         >
-          <nuxt-link
-            to="/"
-            aria-label="Home"
+          <c-logo
+            :text-color="dark ? 'white' : 'black'"
+          />
+        </nuxt-link>
+        <ul class="justify-end my-3 mt-sm-0">
+          <li
+            v-for="link of navigation"
+            :key="link.path"
           >
-            <c-logo
-              :text-color="dark ? 'white' : 'black'"
-            />
-          </nuxt-link>
-          <ul class="justify-end my-3 mt-sm-0">
-            <li
-              v-for="link of navigation"
-              :key="link._path"
-            >
-              <nuxt-link :to="link._path">
-                {{ link.title }}
-              </nuxt-link>
-            </li>
-          </ul>
-        </div>
-      </content-navigation>
+            <nuxt-link :to="link.path">
+              {{ link.title }}
+            </nuxt-link>
+          </li>
+        </ul>
+      </div>
     </v-container>
   </div>
 </template>
 
 <style scoped lang="scss">
+@use 'sass:map';
 @use 'assets/styles/settings';
 
 .nav-bar {
@@ -83,7 +86,7 @@ defineProps({
   width: 6rem;
 }
 
-@media #{map-get(settings.$display-breakpoints, 'sm-and-up')} {
+@media #{map.get(settings.$display-breakpoints, 'sm-and-up')} {
   .nav-bar {
     display: flex;
   }

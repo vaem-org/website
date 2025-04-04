@@ -2,19 +2,6 @@ import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  app: {
-    head: {
-      htmlAttrs: {
-        lang: 'en',
-      },
-    },
-  },
-
-  devtools: { enabled: true },
-
-  build: {
-    transpile: ['vuetify'],
-  },
 
   modules: [
     (_options, nuxt) => {
@@ -34,26 +21,26 @@ export default defineNuxtConfig({
     'nuxt-gtag',
   ],
 
+  devtools: { enabled: true },
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en',
+      },
+    },
+  },
+
+  build: {
+    transpile: ['vuetify'],
+  },
+
+  compatibilityDate: '2025-04-03',
+
   vite: {
     vue: {
       template: {
         transformAssetUrls,
       },
-    },
-  },
-
-  content: {
-    highlight: {
-      theme: 'github-light',
-    },
-    markdown: {
-      anchorLinks: false,
-    },
-  },
-
-  googleFonts: {
-    families: {
-      Montserrat: true,
     },
   },
 
@@ -63,5 +50,22 @@ export default defineNuxtConfig({
     },
   },
 
-  compatibilityDate: '2024-08-29',
+  googleFonts: {
+    families: {
+      Montserrat: true,
+    },
+  },
+
+  content: {
+    build: {
+      markdown: {
+        highlight: {
+          theme: 'github-light',
+        },
+      },
+    },
+    renderer: {
+      anchorLinks: false,
+    },
+  },
 })

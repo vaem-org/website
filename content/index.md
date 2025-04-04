@@ -6,7 +6,7 @@ navigation: false
 ---
 
 ::row-call-to-action
-Want to stream your videos without any restrictions? Use VAEM to encode your video files and stream to your clients using HLS.
+Do you want to stream your videos without any restrictions? Use VAEM to encode your video files and stream to your clients.
 
   ::row-button{to="/quickstart" text="Quickstart"}
   ::
@@ -29,4 +29,3 @@ concurrent users.
 Playback works on most browsers and devices.
   ::
 ::
-
