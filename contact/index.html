@@ -1,0 +1,356 @@
+<!DOCTYPE html><html  lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><style id="vuetify-theme-stylesheet">:root {
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255,255,255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238,238,238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 37,169,206;
+      --v-theme-primary-overlay-multiplier: 1;
+      --v-theme-primary-darken-1: 31,85,146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 72,169,166;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--light {
+      color-scheme: normal;
+      --v-theme-background: 255,255,255;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 255,255,255;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 255,255,255;
+      --v-theme-surface-bright-overlay-multiplier: 1;
+      --v-theme-surface-light: 238,238,238;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 66,66,66;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 238,238,238;
+      --v-theme-primary: 37,169,206;
+      --v-theme-primary-overlay-multiplier: 1;
+      --v-theme-primary-darken-1: 31,85,146;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 72,169,166;
+      --v-theme-secondary-overlay-multiplier: 1;
+      --v-theme-secondary-darken-1: 1,135,134;
+      --v-theme-secondary-darken-1-overlay-multiplier: 1;
+      --v-theme-error: 176,0,32;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 1;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 1;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 1;
+      --v-theme-on-background: 0,0,0;
+      --v-theme-on-surface: 0,0,0;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 0,0,0;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 0, 0, 0;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 0.87;
+      --v-medium-emphasis-opacity: 0.6;
+      --v-disabled-opacity: 0.38;
+      --v-idle-opacity: 0.04;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.12;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 245, 245, 245;
+      --v-theme-on-code: 0, 0, 0;
+    }
+    .v-theme--dark {
+      color-scheme: dark;
+      --v-theme-background: 18,18,18;
+      --v-theme-background-overlay-multiplier: 1;
+      --v-theme-surface: 33,33,33;
+      --v-theme-surface-overlay-multiplier: 1;
+      --v-theme-surface-bright: 204,191,214;
+      --v-theme-surface-bright-overlay-multiplier: 2;
+      --v-theme-surface-light: 66,66,66;
+      --v-theme-surface-light-overlay-multiplier: 1;
+      --v-theme-surface-variant: 163,163,163;
+      --v-theme-surface-variant-overlay-multiplier: 2;
+      --v-theme-on-surface-variant: 66,66,66;
+      --v-theme-primary: 33,150,243;
+      --v-theme-primary-overlay-multiplier: 2;
+      --v-theme-primary-darken-1: 39,124,193;
+      --v-theme-primary-darken-1-overlay-multiplier: 2;
+      --v-theme-secondary: 84,182,178;
+      --v-theme-secondary-overlay-multiplier: 2;
+      --v-theme-secondary-darken-1: 72,169,166;
+      --v-theme-secondary-darken-1-overlay-multiplier: 2;
+      --v-theme-error: 207,102,121;
+      --v-theme-error-overlay-multiplier: 2;
+      --v-theme-info: 33,150,243;
+      --v-theme-info-overlay-multiplier: 2;
+      --v-theme-success: 76,175,80;
+      --v-theme-success-overlay-multiplier: 2;
+      --v-theme-warning: 251,140,0;
+      --v-theme-warning-overlay-multiplier: 2;
+      --v-theme-on-background: 255,255,255;
+      --v-theme-on-surface: 255,255,255;
+      --v-theme-on-surface-bright: 0,0,0;
+      --v-theme-on-surface-light: 255,255,255;
+      --v-theme-on-primary: 255,255,255;
+      --v-theme-on-primary-darken-1: 255,255,255;
+      --v-theme-on-secondary: 255,255,255;
+      --v-theme-on-secondary-darken-1: 255,255,255;
+      --v-theme-on-error: 255,255,255;
+      --v-theme-on-info: 255,255,255;
+      --v-theme-on-success: 255,255,255;
+      --v-theme-on-warning: 255,255,255;
+      --v-border-color: 255, 255, 255;
+      --v-border-opacity: 0.12;
+      --v-high-emphasis-opacity: 1;
+      --v-medium-emphasis-opacity: 0.7;
+      --v-disabled-opacity: 0.5;
+      --v-idle-opacity: 0.1;
+      --v-hover-opacity: 0.04;
+      --v-focus-opacity: 0.12;
+      --v-selected-opacity: 0.08;
+      --v-activated-opacity: 0.12;
+      --v-pressed-opacity: 0.16;
+      --v-dragged-opacity: 0.08;
+      --v-theme-kbd: 33, 37, 41;
+      --v-theme-on-kbd: 255, 255, 255;
+      --v-theme-code: 52, 52, 52;
+      --v-theme-on-code: 204, 204, 204;
+    }
+    .bg-background {
+      --v-theme-overlay-multiplier: var(--v-theme-background-overlay-multiplier);
+      background-color: rgb(var(--v-theme-background)) !important;
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .bg-surface {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface)) !important;
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .bg-surface-bright {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-bright-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-bright)) !important;
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+    .bg-surface-light {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-light-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-light)) !important;
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+    .bg-surface-variant {
+      --v-theme-overlay-multiplier: var(--v-theme-surface-variant-overlay-multiplier);
+      background-color: rgb(var(--v-theme-surface-variant)) !important;
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .bg-primary {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary)) !important;
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .bg-primary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-primary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-primary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .bg-secondary {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary)) !important;
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .bg-secondary-darken-1 {
+      --v-theme-overlay-multiplier: var(--v-theme-secondary-darken-1-overlay-multiplier);
+      background-color: rgb(var(--v-theme-secondary-darken-1)) !important;
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .bg-error {
+      --v-theme-overlay-multiplier: var(--v-theme-error-overlay-multiplier);
+      background-color: rgb(var(--v-theme-error)) !important;
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .bg-info {
+      --v-theme-overlay-multiplier: var(--v-theme-info-overlay-multiplier);
+      background-color: rgb(var(--v-theme-info)) !important;
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .bg-success {
+      --v-theme-overlay-multiplier: var(--v-theme-success-overlay-multiplier);
+      background-color: rgb(var(--v-theme-success)) !important;
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .bg-warning {
+      --v-theme-overlay-multiplier: var(--v-theme-warning-overlay-multiplier);
+      background-color: rgb(var(--v-theme-warning)) !important;
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+    .text-background {
+      color: rgb(var(--v-theme-background)) !important;
+    }
+    .border-background {
+      --v-border-color: var(--v-theme-background);
+    }
+    .text-surface {
+      color: rgb(var(--v-theme-surface)) !important;
+    }
+    .border-surface {
+      --v-border-color: var(--v-theme-surface);
+    }
+    .text-surface-bright {
+      color: rgb(var(--v-theme-surface-bright)) !important;
+    }
+    .border-surface-bright {
+      --v-border-color: var(--v-theme-surface-bright);
+    }
+    .text-surface-light {
+      color: rgb(var(--v-theme-surface-light)) !important;
+    }
+    .border-surface-light {
+      --v-border-color: var(--v-theme-surface-light);
+    }
+    .text-surface-variant {
+      color: rgb(var(--v-theme-surface-variant)) !important;
+    }
+    .border-surface-variant {
+      --v-border-color: var(--v-theme-surface-variant);
+    }
+    .on-surface-variant {
+      color: rgb(var(--v-theme-on-surface-variant)) !important;
+    }
+    .text-primary {
+      color: rgb(var(--v-theme-primary)) !important;
+    }
+    .border-primary {
+      --v-border-color: var(--v-theme-primary);
+    }
+    .text-primary-darken-1 {
+      color: rgb(var(--v-theme-primary-darken-1)) !important;
+    }
+    .border-primary-darken-1 {
+      --v-border-color: var(--v-theme-primary-darken-1);
+    }
+    .text-secondary {
+      color: rgb(var(--v-theme-secondary)) !important;
+    }
+    .border-secondary {
+      --v-border-color: var(--v-theme-secondary);
+    }
+    .text-secondary-darken-1 {
+      color: rgb(var(--v-theme-secondary-darken-1)) !important;
+    }
+    .border-secondary-darken-1 {
+      --v-border-color: var(--v-theme-secondary-darken-1);
+    }
+    .text-error {
+      color: rgb(var(--v-theme-error)) !important;
+    }
+    .border-error {
+      --v-border-color: var(--v-theme-error);
+    }
+    .text-info {
+      color: rgb(var(--v-theme-info)) !important;
+    }
+    .border-info {
+      --v-border-color: var(--v-theme-info);
+    }
+    .text-success {
+      color: rgb(var(--v-theme-success)) !important;
+    }
+    .border-success {
+      --v-border-color: var(--v-theme-success);
+    }
+    .text-warning {
+      color: rgb(var(--v-theme-warning)) !important;
+    }
+    .border-warning {
+      --v-border-color: var(--v-theme-warning);
+    }
+    .on-background {
+      color: rgb(var(--v-theme-on-background)) !important;
+    }
+    .on-surface {
+      color: rgb(var(--v-theme-on-surface)) !important;
+    }
+    .on-surface-bright {
+      color: rgb(var(--v-theme-on-surface-bright)) !important;
+    }
+    .on-surface-light {
+      color: rgb(var(--v-theme-on-surface-light)) !important;
+    }
+    .on-primary {
+      color: rgb(var(--v-theme-on-primary)) !important;
+    }
+    .on-primary-darken-1 {
+      color: rgb(var(--v-theme-on-primary-darken-1)) !important;
+    }
+    .on-secondary {
+      color: rgb(var(--v-theme-on-secondary)) !important;
+    }
+    .on-secondary-darken-1 {
+      color: rgb(var(--v-theme-on-secondary-darken-1)) !important;
+    }
+    .on-error {
+      color: rgb(var(--v-theme-on-error)) !important;
+    }
+    .on-info {
+      color: rgb(var(--v-theme-on-info)) !important;
+    }
+    .on-success {
+      color: rgb(var(--v-theme-on-success)) !important;
+    }
+    .on-warning {
+      color: rgb(var(--v-theme-on-warning)) !important;
+    }
+</style><style>.content[data-v-1d6081ca]{flex-grow:1}.content[data-v-1d6081ca] a.link{display:inline-block}.content[data-v-1d6081ca] p{margin-bottom:1em}.content[data-v-1d6081ca] p:last-child{margin-bottom:0}.content[data-v-1d6081ca] .shiki{margin:1em 0}main.page[data-v-1d6081ca]{display:flex;flex-direction:column;min-height:100vh}</style><style>.nav-bar[data-v-3e852604]{margin-top:2em}.nav-bar ul[data-v-3e852604]{display:inline-flex;flex-grow:1;gap:1em;list-style:none}.nav-bar a[data-v-3e852604]{color:inherit;font-size:1.25rem;outline:none;text-decoration:none}.nav-bar.dark[data-v-3e852604]{color:#fff}.position-absolute[data-v-3e852604]{left:0;right:0;top:0}.c-logo[data-v-3e852604]{width:6rem}@media (min-width:600px){.nav-bar[data-v-3e852604]{display:flex}.c-logo[data-v-3e852604]{width:20rem}}</style><style>footer[data-v-40a743ef]{background:#17112d;color:#fff;margin-top:3em;padding:2em 0}footer a[data-v-40a743ef]{color:inherit}</style><style>.responsive[data-v-992f29f9]{padding-top:34.3993866335%;position:relative}.responsive svg[data-v-992f29f9]{height:100%;left:0;position:absolute;top:0;width:100%}</style><link rel="stylesheet" href="/_nuxt/entry.DtNCNc11.css" crossorigin><link rel="stylesheet" href="/_nuxt/_...BRM8ETl8.css" crossorigin><link rel="stylesheet" href="/_nuxt/ContactForm.CM5q3Xbh.css" crossorigin><link rel="preload" as="fetch" crossorigin="anonymous" href="/contact/_payload.json?e9b7483f-e333-4902-92d2-4ef94aa54d23"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/DMI0wcUy.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/iGsiE-v8.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CTOhEHl1.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/DyDqvFbK.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/CvA74toy.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/BQ6Zx6WZ.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/c0hPfysf.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/NsWgnCFA.js"><link rel="modulepreload" as="script" crossorigin href="/_nuxt/kspjUPl_.js"><link rel="preload" as="fetch" fetchpriority="low" crossorigin="anonymous" href="/_nuxt/builds/meta/e9b7483f-e333-4902-92d2-4ef94aa54d23.json"><link rel="prefetch" as="style" crossorigin href="/_nuxt/index.BoYQ_Lo2.css"><link rel="prefetch" as="script" crossorigin href="/_nuxt/CvCtEN_c.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/C0FallDy.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/D6qNHCzF.js"><link rel="prefetch" as="script" crossorigin href="/_nuxt/BRbjinHp.js"><script type="module" src="/_nuxt/DMI0wcUy.js" crossorigin></script></head><body><div id="__nuxt"><!--[--><main class="page" data-v-1d6081ca><div class="position-relative" data-v-1d6081ca data-v-3e852604><!----><div class="v-container v-locale--is-ltr" style="" data-v-3e852604><div class="nav-bar align-center" data-v-3e852604><a href="/" class="" aria-label="Home" data-v-3e852604><div class="c-logo" style="" data-v-3e852604 data-v-992f29f9><div class="responsive" data-v-992f29f9><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 395.196 135.945" data-v-992f29f9><defs data-v-992f29f9><clipPath id="a" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M74.459 3943.871c-6.82-3.7-10.893-10.43-10.893-18.003v-60.654c0-7.573 4.072-14.303 10.887-18 3.254-1.772 6.707-2.671 10.262-2.671 4.037 0 7.924 1.114 11.17 3.18l49.992 30.346c6.228 3.866 9.945 10.397 9.945 17.472 0 7.141-3.717 13.712-9.944 17.576l-.055.034c-3.16 1.89-7.468.907-9.404-2.149-1.944-3.077-.932-7.264 2.215-9.148 2.215-1.321 3.485-3.583 3.485-6.209 0-2.553-1.296-4.833-3.506-6.219l-49.921-30.2c-2.406-1.418-5.219-1.492-7.638-.25-2.473 1.345-3.892 3.657-3.892 6.344v60.653c0 2.675 1.461 5.09 3.892 6.342 2.484 1.35 5.172 1.276 7.6-.227l29.15-17.638c1.53-.915 3.348-1.199 5.126-.808 1.781.396 3.341 1.473 4.277 2.955a6.48 6.48 0 01.83 4.984 6.629 6.629 0 01-3.021 4.152l-29.139 17.632c-3.464 2.088-7.306 3.137-11.151 3.137-3.513 0-7.029-.874-10.267-2.631" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="b" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M63 3843h341v104H63z" data-v-992f29f9></path></clipPath><clipPath id="c" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M63 3844h93v103H63z" data-v-992f29f9></path></clipPath><clipPath id="d" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M74.459 3943.871c-6.82-3.7-10.893-10.43-10.893-18.003v-60.654c0-7.573 4.072-14.303 10.887-18 3.254-1.772 6.707-2.671 10.262-2.671 4.037 0 7.924 1.114 11.17 3.18l49.992 30.346c6.228 3.866 9.945 10.397 9.945 17.472 0 7.141-3.717 13.712-9.944 17.576l-.055.034c-3.16 1.89-7.468.907-9.404-2.149-1.944-3.077-.932-7.264 2.215-9.148 2.215-1.321 3.485-3.583 3.485-6.209 0-2.553-1.296-4.833-3.506-6.219l-49.921-30.2c-2.406-1.418-5.219-1.492-7.638-.25-2.473 1.345-3.892 3.657-3.892 6.344v60.653c0 2.675 1.461 5.09 3.892 6.342 2.484 1.35 5.172 1.276 7.6-.227l29.15-17.638c1.53-.915 3.348-1.199 5.126-.808 1.781.396 3.341 1.473 4.277 2.955a6.48 6.48 0 01.83 4.984 6.629 6.629 0 01-3.021 4.152l-29.139 17.632c-3.464 2.088-7.306 3.137-11.151 3.137-3.513 0-7.029-.874-10.267-2.631l71.419-48.226" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="g" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M221.371 3921.622c-2.598 1.068-5.584-.112-6.679-2.632l-14.85-34.099-14.85 34.099c-1.095 2.52-4.094 3.7-6.68 2.632-2.592-1.064-3.805-3.971-2.707-6.49l19.545-44.878c.796-1.833 2.645-3.023 4.693-3.023 2.048 0 3.897 1.19 4.694 3.023l19.542 44.878c1.098 2.519-.115 5.426-2.708 6.49" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="h" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M63 3843h341v104H63z" data-v-992f29f9></path></clipPath><clipPath id="i" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M233.395 3888.353l6.968 16.001 6.968-16.001zm26.324-3.034a.097.097 0 01-.007.019l-14.655 33.653c-.796 1.833-2.645 3.022-4.694 3.022-2.047 0-3.897-1.189-4.693-3.022l-14.659-33.66-4.885-11.217c-1.098-2.52.114-5.425 2.706-6.489 2.589-1.064 5.585.111 6.68 2.63l3.57 8.197h22.562l3.57-8.197c.82-1.89 2.709-3.022 4.695-3.022.662 0 1.335.126 1.983.392 2.593 1.064 3.805 3.969 2.707 6.489l-4.88 11.207z" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="j" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M63 3843h341v104H63z" data-v-992f29f9></path></clipPath><clipPath id="k" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M310.683 3867.231h49.28v54.785h-49.28z" data-v-992f29f9></path></clipPath><clipPath id="l" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M310 3867h50v56h-50z" data-v-992f29f9></path></clipPath><clipPath id="m" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M356.618 3921.714c-2.012.714-4.265.135-5.64-1.456l-15.654-17.969-15.655 17.974c-1.384 1.581-3.631 2.161-5.645 1.451-2.005-.716-3.341-2.573-3.341-4.652v-44.88c0-2.736 2.282-4.951 5.096-4.951 2.815 0 5.097 2.215 5.097 4.951v31.364l10.558-12.123c1.937-2.214 5.843-2.219 7.78.01l10.556 12.118v-31.364c0-2.736 2.282-4.951 5.096-4.951 2.815 0 5.098 2.215 5.098 4.951v44.88c0 2.079-1.337 3.936-3.346 4.652" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="n" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M310 3867h50v56h-50z" data-v-992f29f9></path></clipPath><clipPath id="o" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M300.203 3912.11c2.815 0 5.097 2.215 5.097 4.952 0 2.736-2.282 4.951-5.097 4.951h-25.345c-2.815 0-5.097-2.215-5.097-4.951v-44.879c0-2.737 2.282-4.952 5.097-4.952h25.345c2.815 0 5.097 2.215 5.097 4.952s-2.282 4.951-5.097 4.951h-20.249v12.539h10.051c2.815 0 5.097 2.214 5.097 4.951 0 2.737-2.282 4.952-5.097 4.952h-10.05v12.534z" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="p" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M63 3843h341v104H63z" data-v-992f29f9></path></clipPath><!--[--><linearGradient id="gradient1_1" x1="0" y1="0" x2="0" y2="1024" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 63.566 3946.502)" data-v-992f29f9><stop offset="0" stop-color="#ff5acd" data-v-992f29f9></stop><stop offset="1" stop-color="#fbda61" data-v-992f29f9></stop></linearGradient><linearGradient id="gradient2_1" x1="0" y1="0" x2="0" y2="1024" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 63.566 3946.502)" data-v-992f29f9><stop offset="0" stop-color="#2af598" data-v-992f29f9></stop><stop offset="1" stop-color="#08aeea" data-v-992f29f9></stop></linearGradient><!--]--><!--[--><linearGradient id="gradient1_2" x1="92.256" y1="0" x2="0" y2="101.96" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 63.566 3946.502)" data-v-992f29f9><stop offset="0" stop-color="#ff5acd" data-v-992f29f9></stop><stop offset="1" stop-color="#fbda61" data-v-992f29f9></stop></linearGradient><linearGradient id="gradient2_2" x1="92.256" y1="0" x2="0" y2="101.96" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 63.566 3946.502)" data-v-992f29f9><stop offset="0" stop-color="#2af598" data-v-992f29f9></stop><stop offset="1" stop-color="#08aeea" data-v-992f29f9></stop></linearGradient><!--]--></defs><g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 -84.755 5262.002)" data-v-992f29f9><g clip-path="url(#b)" data-v-992f29f9><g clip-path="url(#c)" data-v-992f29f9><g clip-path="url(#d)" data-v-992f29f9><path d="M63 3844h93v103H63z" fill="url(#gradient1_1)" data-v-992f29f9></path><path d="M63 3844h93v103H63z" fill="url(#gradient1_2)" data-v-992f29f9></path></g></g></g></g><g clip-path="url(#g)" transform="matrix(1.33333 0 0 -1.33333 -84.755 5262.002)" data-v-992f29f9><g clip-path="url(#h)" data-v-992f29f9><path d="M170.2 3862.231h59.284v64.785H170.2z" fill="black" data-v-992f29f9></path></g></g><g clip-path="url(#i)" transform="matrix(1.33333 0 0 -1.33333 -84.755 5262.002)" data-v-992f29f9><g clip-path="url(#j)" data-v-992f29f9><path d="M210.721 3862.231h59.283v64.782h-59.283z" fill="black" data-v-992f29f9></path></g></g><g clip-path="url(#k)" transform="matrix(1.33333 0 0 -1.33333 -84.755 5262.002)" data-v-992f29f9><g clip-path="url(#l)" data-v-992f29f9><g clip-path="url(#m)" data-v-992f29f9><g clip-path="url(#n)" data-v-992f29f9><path d="M305.683 3862.231h59.28v64.785h-59.28z" fill="black" data-v-992f29f9></path></g></g></g></g><g clip-path="url(#o)" transform="matrix(1.33333 0 0 -1.33333 -84.755 5262.002)" data-v-992f29f9><g clip-path="url(#p)" data-v-992f29f9><path d="M264.761 3862.231H310.3v64.782H264.76z" fill="black" data-v-992f29f9></path></g></g></svg></div></div></a><ul class="justify-end my-3 mt-sm-0" data-v-3e852604><!--[--><li data-v-3e852604><a href="/quickstart" class="" data-v-3e852604>Quickstart</a></li><li data-v-3e852604><a aria-current="page" href="/contact" class="router-link-active router-link-exact-active" data-v-3e852604>Contact</a></li><!--]--></ul></div></div></div><div class="content" data-v-1d6081ca><div data-v-1d6081ca><div class="v-container v-locale--is-ltr" style=""><!--[--><h1 id="contact"><!--[-->Contact<!--]--></h1><p><!--[-->Please fill out the following form and we will contact you as soon as possible.<!--]--></p><div class="v-row" style=""><div class="v-col-sm-6 v-col-12" style=""><form class="v-form" style="" novalidate data-netlify="true" name="contact"><!--[--><div class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-theme--light v-locale--is-ltr v-text-field mb-3" style=""><!----><div class="v-input__control"><!--[--><div class="v-field v-field--center-affix v-field--variant-filled v-theme--light v-locale--is-ltr" style=""><div class="v-field__overlay"></div><div class="v-field__loader"><div class="v-progress-linear v-theme--light v-locale--is-ltr" style="top:0;height:0;--v-progress-linear-height:2px;" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="opacity:NaN;"></div><div class="v-progress-linear__buffer" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><div class="v-field__field" data-no-activator><label class="v-label v-field-label v-field-label--floating" style="" aria-hidden="true" for="input-v-0-1-0-2-0-0"><!----><!--[-->Name<!--]--></label><label class="v-label v-field-label" style="" for="input-v-0-1-0-2-0-0"><!----><!--[-->Name<!--]--></label><!--[--><!--[--><!----><input value autofocus name="name" size="1" type="text" id="input-v-0-1-0-2-0-0" aria-describedby="input-v-0-1-0-2-0-0-messages" box class="v-field__input"><!----><!--]--><!--]--></div><!----><!----><div class="v-field__outline" style=""><!----><!----></div></div><!--]--></div><!----><div id="input-v-0-1-0-2-0-0-messages" class="v-input__details" role="alert" aria-live="polite"><div class="v-messages" style=""></div><!----></div></div><div class="v-input v-input--horizontal v-input--center-affix v-input--density-default v-theme--light v-locale--is-ltr v-text-field mb-3" style=""><!----><div class="v-input__control"><!--[--><div class="v-field v-field--appended v-field--center-affix v-field--variant-filled v-theme--light v-locale--is-ltr" style=""><div class="v-field__overlay"></div><div class="v-field__loader"><div class="v-progress-linear v-theme--light v-locale--is-ltr" style="top:0;height:0;--v-progress-linear-height:2px;" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="opacity:NaN;"></div><div class="v-progress-linear__buffer" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><div class="v-field__field" data-no-activator><label class="v-label v-field-label v-field-label--floating" style="" aria-hidden="true" for="input-v-0-1-0-2-0-2"><!----><!--[-->Email address<!--]--></label><label class="v-label v-field-label" style="" for="input-v-0-1-0-2-0-2"><!----><!--[-->Email address<!--]--></label><!--[--><!--[--><!----><input value name="email" size="1" type="text" id="input-v-0-1-0-2-0-2" aria-describedby="input-v-0-1-0-2-0-2-messages" box required class="v-field__input"><!----><!--]--><!--]--></div><!----><div class="v-field__append-inner"><!----><i class="v-icon notranslate v-theme--light v-icon--size-default" style="" aria-hidden="true"><svg class="v-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="mdi-at"></path></svg></i></div><div class="v-field__outline" style=""><!----><!----></div></div><!--]--></div><!----><div id="input-v-0-1-0-2-0-2-messages" class="v-input__details" role="alert" aria-live="polite"><div class="v-messages" style=""></div><!----></div></div><div class="v-input v-input--horizontal v-input--density-default v-theme--light v-locale--is-ltr v-textarea v-text-field mb-3" style=""><!----><div class="v-input__control"><!--[--><div class="v-field v-field--variant-filled v-theme--light v-locale--is-ltr" style="--v-textarea-control-height:;"><div class="v-field__overlay"></div><div class="v-field__loader"><div class="v-progress-linear v-theme--light v-locale--is-ltr" style="top:0;height:0;--v-progress-linear-height:2px;" role="progressbar" aria-hidden="true" aria-valuemin="0" aria-valuemax="100"><!----><div class="v-progress-linear__background" style="opacity:NaN;"></div><div class="v-progress-linear__buffer" style="opacity:NaN;width:0%;"></div><div class="v-progress-linear__indeterminate"><!--[--><div class="v-progress-linear__indeterminate long" style=""></div><div class="v-progress-linear__indeterminate short" style=""></div><!--]--></div><!----></div></div><!----><div class="v-field__field" data-no-activator><label class="v-label v-field-label v-field-label--floating" style="" aria-hidden="true" for="input-v-0-1-0-2-0-4"><!----><!--[-->Question / remark<!--]--></label><label class="v-label v-field-label" style="" for="input-v-0-1-0-2-0-4"><!----><!--[-->Question / remark<!--]--></label><!--[--><!--[--><!----><textarea class="v-field__input" rows="5" name="remark" id="input-v-0-1-0-2-0-4" aria-describedby="input-v-0-1-0-2-0-4-messages" box required></textarea><!----><!----><!--]--><!--]--></div><!----><!----><div class="v-field__outline" style=""><!----><!----></div></div><!--]--></div><!----><div id="input-v-0-1-0-2-0-4-messages" class="v-input__details" role="alert" aria-live="polite"><div class="v-messages" style=""></div><!----></div></div><button type="submit" class="v-btn v-btn--disabled v-theme--light bg-primary v-btn--density-default v-btn--size-default v-btn--variant-elevated ml-0 mt-5 default" style="" disabled depressed round><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[-->Send<!--]--><!--]--></span><!----><!----></button><!--]--></form></div></div><!--]--></div></div></div><footer itemscope itemtype="https://schema.org/Corporation" data-v-1d6081ca data-v-40a743ef><div class="v-container v-locale--is-ltr" style="" data-v-40a743ef><div class="v-row align-center" style="" data-v-40a743ef><div class="v-col-sm-4 v-col-12" style="" data-v-40a743ef><div class="c-logo" style="width:15rem;" data-v-40a743ef data-v-992f29f9><div class="responsive" data-v-992f29f9><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 395.196 135.945" data-v-992f29f9><defs data-v-992f29f9><clipPath id="a" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M74.459 3943.871c-6.82-3.7-10.893-10.43-10.893-18.003v-60.654c0-7.573 4.072-14.303 10.887-18 3.254-1.772 6.707-2.671 10.262-2.671 4.037 0 7.924 1.114 11.17 3.18l49.992 30.346c6.228 3.866 9.945 10.397 9.945 17.472 0 7.141-3.717 13.712-9.944 17.576l-.055.034c-3.16 1.89-7.468.907-9.404-2.149-1.944-3.077-.932-7.264 2.215-9.148 2.215-1.321 3.485-3.583 3.485-6.209 0-2.553-1.296-4.833-3.506-6.219l-49.921-30.2c-2.406-1.418-5.219-1.492-7.638-.25-2.473 1.345-3.892 3.657-3.892 6.344v60.653c0 2.675 1.461 5.09 3.892 6.342 2.484 1.35 5.172 1.276 7.6-.227l29.15-17.638c1.53-.915 3.348-1.199 5.126-.808 1.781.396 3.341 1.473 4.277 2.955a6.48 6.48 0 01.83 4.984 6.629 6.629 0 01-3.021 4.152l-29.139 17.632c-3.464 2.088-7.306 3.137-11.151 3.137-3.513 0-7.029-.874-10.267-2.631" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="b" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M63 3843h341v104H63z" data-v-992f29f9></path></clipPath><clipPath id="c" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M63 3844h93v103H63z" data-v-992f29f9></path></clipPath><clipPath id="d" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M74.459 3943.871c-6.82-3.7-10.893-10.43-10.893-18.003v-60.654c0-7.573 4.072-14.303 10.887-18 3.254-1.772 6.707-2.671 10.262-2.671 4.037 0 7.924 1.114 11.17 3.18l49.992 30.346c6.228 3.866 9.945 10.397 9.945 17.472 0 7.141-3.717 13.712-9.944 17.576l-.055.034c-3.16 1.89-7.468.907-9.404-2.149-1.944-3.077-.932-7.264 2.215-9.148 2.215-1.321 3.485-3.583 3.485-6.209 0-2.553-1.296-4.833-3.506-6.219l-49.921-30.2c-2.406-1.418-5.219-1.492-7.638-.25-2.473 1.345-3.892 3.657-3.892 6.344v60.653c0 2.675 1.461 5.09 3.892 6.342 2.484 1.35 5.172 1.276 7.6-.227l29.15-17.638c1.53-.915 3.348-1.199 5.126-.808 1.781.396 3.341 1.473 4.277 2.955a6.48 6.48 0 01.83 4.984 6.629 6.629 0 01-3.021 4.152l-29.139 17.632c-3.464 2.088-7.306 3.137-11.151 3.137-3.513 0-7.029-.874-10.267-2.631l71.419-48.226" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="g" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M221.371 3921.622c-2.598 1.068-5.584-.112-6.679-2.632l-14.85-34.099-14.85 34.099c-1.095 2.52-4.094 3.7-6.68 2.632-2.592-1.064-3.805-3.971-2.707-6.49l19.545-44.878c.796-1.833 2.645-3.023 4.693-3.023 2.048 0 3.897 1.19 4.694 3.023l19.542 44.878c1.098 2.519-.115 5.426-2.708 6.49" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="h" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M63 3843h341v104H63z" data-v-992f29f9></path></clipPath><clipPath id="i" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M233.395 3888.353l6.968 16.001 6.968-16.001zm26.324-3.034a.097.097 0 01-.007.019l-14.655 33.653c-.796 1.833-2.645 3.022-4.694 3.022-2.047 0-3.897-1.189-4.693-3.022l-14.659-33.66-4.885-11.217c-1.098-2.52.114-5.425 2.706-6.489 2.589-1.064 5.585.111 6.68 2.63l3.57 8.197h22.562l3.57-8.197c.82-1.89 2.709-3.022 4.695-3.022.662 0 1.335.126 1.983.392 2.593 1.064 3.805 3.969 2.707 6.489l-4.88 11.207z" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="j" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M63 3843h341v104H63z" data-v-992f29f9></path></clipPath><clipPath id="k" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M310.683 3867.231h49.28v54.785h-49.28z" data-v-992f29f9></path></clipPath><clipPath id="l" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M310 3867h50v56h-50z" data-v-992f29f9></path></clipPath><clipPath id="m" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M356.618 3921.714c-2.012.714-4.265.135-5.64-1.456l-15.654-17.969-15.655 17.974c-1.384 1.581-3.631 2.161-5.645 1.451-2.005-.716-3.341-2.573-3.341-4.652v-44.88c0-2.736 2.282-4.951 5.096-4.951 2.815 0 5.097 2.215 5.097 4.951v31.364l10.558-12.123c1.937-2.214 5.843-2.219 7.78.01l10.556 12.118v-31.364c0-2.736 2.282-4.951 5.096-4.951 2.815 0 5.098 2.215 5.098 4.951v44.88c0 2.079-1.337 3.936-3.346 4.652" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="n" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M310 3867h50v56h-50z" data-v-992f29f9></path></clipPath><clipPath id="o" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M300.203 3912.11c2.815 0 5.097 2.215 5.097 4.952 0 2.736-2.282 4.951-5.097 4.951h-25.345c-2.815 0-5.097-2.215-5.097-4.951v-44.879c0-2.737 2.282-4.952 5.097-4.952h25.345c2.815 0 5.097 2.215 5.097 4.952s-2.282 4.951-5.097 4.951h-20.249v12.539h10.051c2.815 0 5.097 2.214 5.097 4.951 0 2.737-2.282 4.952-5.097 4.952h-10.05v12.534z" clip-rule="evenodd" data-v-992f29f9></path></clipPath><clipPath id="p" clipPathUnits="userSpaceOnUse" data-v-992f29f9><path d="M63 3843h341v104H63z" data-v-992f29f9></path></clipPath><!--[--><linearGradient id="gradient1_1" x1="0" y1="0" x2="0" y2="1024" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 63.566 3946.502)" data-v-992f29f9><stop offset="0" stop-color="#ff5acd" data-v-992f29f9></stop><stop offset="1" stop-color="#fbda61" data-v-992f29f9></stop></linearGradient><linearGradient id="gradient2_1" x1="0" y1="0" x2="0" y2="1024" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 63.566 3946.502)" data-v-992f29f9><stop offset="0" stop-color="#2af598" data-v-992f29f9></stop><stop offset="1" stop-color="#08aeea" data-v-992f29f9></stop></linearGradient><!--]--><!--[--><linearGradient id="gradient1_2" x1="92.256" y1="0" x2="0" y2="101.96" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 63.566 3946.502)" data-v-992f29f9><stop offset="0" stop-color="#ff5acd" data-v-992f29f9></stop><stop offset="1" stop-color="#fbda61" data-v-992f29f9></stop></linearGradient><linearGradient id="gradient2_2" x1="92.256" y1="0" x2="0" y2="101.96" gradientUnits="userSpaceOnUse" gradientTransform="matrix(1 0 0 -1 63.566 3946.502)" data-v-992f29f9><stop offset="0" stop-color="#2af598" data-v-992f29f9></stop><stop offset="1" stop-color="#08aeea" data-v-992f29f9></stop></linearGradient><!--]--></defs><g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 -84.755 5262.002)" data-v-992f29f9><g clip-path="url(#b)" data-v-992f29f9><g clip-path="url(#c)" data-v-992f29f9><g clip-path="url(#d)" data-v-992f29f9><path d="M63 3844h93v103H63z" fill="url(#gradient2_1)" data-v-992f29f9></path><path d="M63 3844h93v103H63z" fill="url(#gradient2_2)" data-v-992f29f9></path></g></g></g></g><g clip-path="url(#g)" transform="matrix(1.33333 0 0 -1.33333 -84.755 5262.002)" data-v-992f29f9><g clip-path="url(#h)" data-v-992f29f9><path d="M170.2 3862.231h59.284v64.785H170.2z" fill="#FFF" data-v-992f29f9></path></g></g><g clip-path="url(#i)" transform="matrix(1.33333 0 0 -1.33333 -84.755 5262.002)" data-v-992f29f9><g clip-path="url(#j)" data-v-992f29f9><path d="M210.721 3862.231h59.283v64.782h-59.283z" fill="#FFF" data-v-992f29f9></path></g></g><g clip-path="url(#k)" transform="matrix(1.33333 0 0 -1.33333 -84.755 5262.002)" data-v-992f29f9><g clip-path="url(#l)" data-v-992f29f9><g clip-path="url(#m)" data-v-992f29f9><g clip-path="url(#n)" data-v-992f29f9><path d="M305.683 3862.231h59.28v64.785h-59.28z" fill="#FFF" data-v-992f29f9></path></g></g></g></g><g clip-path="url(#o)" transform="matrix(1.33333 0 0 -1.33333 -84.755 5262.002)" data-v-992f29f9><g clip-path="url(#p)" data-v-992f29f9><path d="M264.761 3862.231H310.3v64.782H264.76z" fill="#FFF" data-v-992f29f9></path></g></g></svg></div></div></div><div class="v-col-sm-4 v-col-12" style="" data-v-40a743ef><div data-v-40a743ef><p><!--[-->The open source video streaming platform.<!--]--></p></div></div><div class="v-col-sm-4 v-col-12 contact" style="" data-v-40a743ef><h2 data-v-40a743ef>Contact</h2><a href="mailto:info@vaem.org" data-v-40a743ef><i class="v-icon notranslate v-theme--light v-icon--size-default mr-2" style="" aria-hidden="true" data-v-40a743ef><svg class="v-icon__svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" role="img" aria-hidden="true"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z"></path></svg></i><span itemprop="email" data-v-40a743ef>info@vaem.org</span></a></div></div></div><div class="v-container v-locale--is-ltr copyright" style="" data-v-40a743ef><div class="d-flex align-center" data-v-40a743ef><div class="flex-grow-1" data-v-40a743ef> © VAEM 2025. All rights reserved. </div><div class="flex-shrink-1" data-v-40a743ef><a class="v-btn v-btn--elevated v-btn--icon v-theme--light v-btn--density-default v-btn--size-default v-btn--variant-elevated" style="" href="https://github.com/vaem-org" fab dark depressed target="_blank" itemprop="sameAs" data-v-40a743ef><!--[--><span class="v-btn__overlay"></span><span class="v-btn__underlay"></span><!--]--><!----><span class="v-btn__content" data-no-activator><!--[--><!--[--><img src="data:image/svg+xml,%3csvg%20role=&#39;img&#39;%20viewBox=&#39;0%200%2024%2024&#39;%20xmlns=&#39;http://www.w3.org/2000/svg&#39;%3e%3ctitle%3eGitHub%3c/title%3e%3cpath%20d=&#39;M12%20.297c-6.63%200-12%205.373-12%2012%200%205.303%203.438%209.8%208.205%2011.385.6.113.82-.258.82-.577%200-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422%2018.07%203.633%2017.7%203.633%2017.7c-1.087-.744.084-.729.084-.729%201.205.084%201.838%201.236%201.838%201.236%201.07%201.835%202.809%201.305%203.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93%200-1.31.465-2.38%201.235-3.22-.135-.303-.54-1.523.105-3.176%200%200%201.005-.322%203.3%201.23.96-.267%201.98-.399%203-.405%201.02.006%202.04.138%203%20.405%202.28-1.552%203.285-1.23%203.285-1.23.645%201.653.24%202.873.12%203.176.765.84%201.23%201.91%201.23%203.22%200%204.61-2.805%205.625-5.475%205.92.42.36.81%201.096.81%202.22%200%201.606-.015%202.896-.015%203.286%200%20.315.21.69.825.57C20.565%2022.092%2024%2017.592%2024%2012.297c0-6.627-5.373-12-12-12&#39;/%3e%3c/svg%3e" alt="Github" width="16" data-v-40a743ef><!--]--><!--]--></span><!----><!----></a></div></div></div></footer></main><!--]--></div><div id="teleports"></div><script type="application/json" data-nuxt-data="nuxt-app" data-ssr="true" id="__NUXT_DATA__" data-src="/contact/_payload.json?e9b7483f-e333-4902-92d2-4ef94aa54d23">[{"state":1,"once":3,"_errors":4,"serverRendered":6,"path":7,"prerenderedAt":8},["Reactive",2],{},["Set"],["ShallowReactive",5],{"doc-contact":-1,"main-nav":-1,"footer":-1,"form-submitted":-1},true,"/contact",1743757110774]</script><script>window.__NUXT__={};window.__NUXT__.config={public:{content:{wsUrl:""},mdc:{components:{prose:true,map:{}},headings:{anchorLinks:false}},gtag:{enabled:true,initMode:"auto",id:"",initCommands:[],config:{},tags:[],loadingStrategy:"defer",url:"https://www.googletagmanager.com/gtag/js"},preview:{api:"https://api.nuxt.studio",iframeMessagingAllowedOrigins:""}},app:{baseURL:"/",buildId:"e9b7483f-e333-4902-92d2-4ef94aa54d23",buildAssetsDir:"/_nuxt/",cdnURL:""}}</script></body></html>

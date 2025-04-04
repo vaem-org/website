@@ -1,1 +1,0 @@
-import{m as s,g as r,l as n,G as o}from"./Cklwf_cd.js";const t={};function a(e,c){return n(),r("li",null,[o(e.$slots,"default")])}const _=Object.assign(s(t,[["render",a]]),{__name:"ProseLi"});export{_ as default};

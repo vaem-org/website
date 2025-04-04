@@ -1,1 +1,0 @@
-import{m as r,g as s,l as t,G as n}from"./Cklwf_cd.js";const o={};function a(e,c){return t(),s("tr",null,[n(e.$slots,"default")])}const _=Object.assign(r(o,[["render",a]]),{__name:"ProseTr"});export{_ as default};
