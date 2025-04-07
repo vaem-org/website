@@ -1,0 +1,1 @@
+import{l as o,f as s,k as r,aa as t}from"./DblK3d08.js";const a={};function n(e,c){return r(),s("tbody",null,[t(e.$slots,"default")])}const _=Object.assign(o(a,[["render",n]]),{__name:"ProseTbody"});export{_ as default};

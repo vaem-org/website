@@ -1,1 +1,0 @@
-import{l as o,a0 as a,k as e,w as r,aa as n}from"./B_46Q0av.js";import{p as s}from"./BXYZXjbg.js";import"./DASxgcKp.js";import"./Cxg8R6Rz.js";import"./CsUACwU-.js";const c={};function i(t,l){return e(),a(s,null,{default:r(()=>[n(t.$slots,"default")]),_:3})}const u=Object.assign(o(c,[["render",i]]),{__name:"RowContainer"});export{u as default};
