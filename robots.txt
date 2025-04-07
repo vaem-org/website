@@ -2,5 +2,5 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://localhost/sitemap.xml
+Sitemap: https://vaem.org/sitemap.xml
 # END nuxt-robots
