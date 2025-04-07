@@ -17,11 +17,12 @@ export default defineNuxtConfig({
         }))
       })
     },
+    '@nuxtjs/seo',
     '@nuxt/eslint',
     '@nuxt/content',
     '@nuxtjs/google-fonts',
     '@nuxt/image',
-    'nuxt-gtag',
+    'nuxt-gtag'
   ],
 
   devtools: { enabled: true },
