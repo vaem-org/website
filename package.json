@@ -16,21 +16,24 @@
   },
   "devDependencies": {
     "@mdi/js": "^7.4.47",
-    "@nuxt/content": "^3.4.0",
-    "@nuxt/eslint": "^1.3.0",
-    "@nuxt/image": "^1.10.0",
+    "@nuxt/content": "^3.11.0",
+    "@nuxt/eslint": "^1.13.0",
+    "@nuxt/image": "^2.0.0",
     "@nuxtjs/google-fonts": "^3.2.0",
-    "eslint": "^9.23.0",
-    "nuxt": "^3.16.2",
-    "nuxt-gtag": "^3.0.2",
-    "vite-plugin-vuetify": "^2.1.0",
-    "vue": "^3.5.13",
-    "vue-router": "^4.5.0",
-    "vuetify": "^3.8.0"
+    "eslint": "^9.39.2",
+    "nuxt": "^4.3.0",
+    "nuxt-gtag": "^4.1.0",
+    "nuxt-studio": "^1.2.0",
+    "vite-plugin-vuetify": "^2.1.3",
+    "vue": "^3.5.27",
+    "vue-router": "^4.6.4",
+    "vuetify": "^3.11.8",
+    "vuetify-nuxt-module": "^0.19.3"
   },
   "dependencies": {
-    "@nuxtjs/seo": "^3.0.2",
-    "sass-embedded": "^1.86.2"
+    "@nuxtjs/seo": "^3.4.0",
+    "better-sqlite3": "^12.6.2",
+    "sass-embedded": "^1.97.3"
   },
   "packageManager": "pnpm@8.15.9+sha512.499434c9d8fdd1a2794ebf4552b3b25c0a633abcee5bb15e7b5de90f32f47b513aca98cd5cfd001c31f0db454bc3804edccd578501e4ca293a6816166bbd9f81"
 }

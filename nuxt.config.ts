@@ -1,28 +1,14 @@
-import vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
-
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  future: {
-    compatibilityVersion: 4,
-  },
 
   modules: [
-    (_options, nuxt) => {
-      nuxt.hooks.hook('vite:extendConfig', (config) => {
-        config.plugins?.push?.(vuetify({
-          autoImport: true,
-          styles: {
-            configFile: 'assets/styles/settings.scss',
-          },
-        }))
-      })
-    },
     '@nuxtjs/seo',
     '@nuxt/eslint',
     '@nuxt/content',
     '@nuxtjs/google-fonts',
     '@nuxt/image',
-    'nuxt-gtag'
+    'nuxt-gtag',
+    'nuxt-studio',
   ],
 
   devtools: { enabled: true },
@@ -31,32 +17,6 @@ export default defineNuxtConfig({
       htmlAttrs: {
         lang: 'en',
       },
-    },
-  },
-
-  build: {
-    transpile: ['vuetify'],
-  },
-
-  compatibilityDate: '2025-04-03',
-
-  vite: {
-    vue: {
-      template: {
-        transformAssetUrls,
-      },
-    },
-  },
-
-  eslint: {
-    config: {
-      stylistic: true,
-    },
-  },
-
-  googleFonts: {
-    families: {
-      Montserrat: true,
     },
   },
 
@@ -73,6 +33,31 @@ export default defineNuxtConfig({
     },
     renderer: {
       anchorLinks: false,
+    },
+  },
+  future: {
+    compatibilityVersion: 4,
+  },
+
+  compatibilityDate: '2025-04-03',
+
+  eslint: {
+    config: {
+      stylistic: true,
+    },
+  },
+
+  googleFonts: {
+    families: {
+      Montserrat: true,
+    },
+  },
+  studio: {
+    i18n: {
+      defaultLocale: 'nl',
+    },
+    auth: {
+      gitlab: {},
     },
   },
 })

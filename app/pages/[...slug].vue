@@ -7,7 +7,6 @@ const { data: doc } = await useAsyncData(`doc-${route.params.slug}`, async () =>
 useSeoMeta({
   description: doc.value?.description,
 })
-
 </script>
 
 <template>
